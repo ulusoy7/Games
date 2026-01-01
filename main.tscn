@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://2oqfqxx5b61g" path="res://enemy.tscn" id="2_0xm2m"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_ig7tw")]
+
+[node name="Enemy" parent="." instance=ExtResource("2_0xm2m")]
+position = Vector2(832, 418)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="GameOverLabel" type="Label" parent="UI"]
+show_behind_parent = true
+offset_left = 205.0
+offset_top = 67.00001
+offset_right = 344.8719
+offset_bottom = 116.00001
+scale = Vector2(5.9216757, 7.945543)
+text = "GAME OVER
+Press R to Restart"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Enemy2" parent="." instance=ExtResource("2_0xm2m")]
+position = Vector2(271, 408)
